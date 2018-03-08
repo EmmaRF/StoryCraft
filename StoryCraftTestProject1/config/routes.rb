@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   root :to => redirect('static_pages/home') # home and the other are different
     # root :to => redirect('/') # home and the other are different
     # root :to => redirect('/home') # home and the other are different
+  get 'static_pages/header'
 end

@@ -1,0 +1,271 @@
+/*ongoing code on codepen.io reference that to make sure this is up to date*/
+
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*trying to make header touch both sides on lesson page*/
+/*html, body { margin: 0; padding: 0; } */
+
+header {
+  /*margin: 0;*/
+  
+  width: 100%;
+  z-index: 10;
+  
+  /*removes underline*/
+  text-decoration: none;
+  
+  background: black;
+  color: white;
+  
+  /*look up what "line-height" means*/
+  line-height: 1.5; 
+  /*line-height: 1.5;*/
+  /*line-height: 1.82;*/
+ 
+  /*line-height: 30px;*/
+  
+
+/*look up what "border-bottom", "display", and "position" means */
+  /*border-bottom: 1px solid #222;*/
+  display: flex;
+  position: relative;
+/*     display: block; */
+  
+/*   font-size: large; */
+   /*font-size: 25px; */
+  
+  /*overflow: auto;*/
+  white-space: nowrap;   
+}
+
+.logo {
+    /*removes underline*/
+  text-decoration: none;
+  
+   padding: 20px;
+   
+   /*padding: 2em;*/
+   
+  /*font-size: 50px;*/
+/*   maybe make it same font size as others if we can get others to be aligned with the other end of the screan/window */
+
+  font-size: 25px;
+  /*font-size: 2em;*/
+  /*font-size: 1.5em;*/
+  /*font-size: 1.7em;*/
+  
+  
+  background: black;
+  color: white;
+  
+  /*position: absolute;*/
+    
+    left: 0px;
+}
+
+.toTheLeft {
+    /*text-align: right;*/
+    
+    /*position: absolute; */
+    /*or fixed*/
+    
+    position: absolute;
+    right: 0px;
+    /*right: 0em;*/
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  /*color: #f2f2f2;*/
+  /*text-align: center;*/
+  padding: 14px 16px; /*Couldn't translate this into em without having some problems*/
+  /*padding: 0.4516em 0.5161em;*/
+  text-decoration: none;
+  /*font-size: 17px;*/
+}
+
+.invisible{
+  display: none;
+}
+
+.main-links {
+  /*removes underline*/
+  text-decoration: none;
+  
+  /*font-size: 25px; */
+  /*font-size: 40px;*/
+  /*line-height: 2;*/
+  line-height: 2.4;
+  
+  /*font-size: 20px;*/
+  font-size: 1.3em;
+  
+  /*don't know what this does */
+  justify-content: flex-end;
+  /*possition: fixed;*/
+  /*right: 0; */
+  
+  background: black;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+  
+  /*font-size: 30px;*/
+  font-size: 1.875em;
+  color: pink;
+  position: absolute;
+  /*right: 20px;*/
+  right: 0.65em;
+  
+  top: 0;
+}
+
+.spacing {
+  /*removes underline*/
+  text-decoration: none;
+  
+  /*padding: 20px;*/
+  /*font-size: 25px;*/
+  background: black; 
+  
+  padding: 2em;
+  font-size: 1.7em;
+  
+  /*light blueish lavender */
+  /*background: #DCD0FF;*/
+}
+
+/*a {*/
+/*  text-decoration: none;*/
+/*  padding: 12px*/
+  
+  /*//Removes underline*/
+  /*//text-decoration: none;*/
+/*  background: black;*/
+/*  color: white;*/
+  
+/*  padding: 20px;*/
+  
+/*  text-align: center;*/
+/*}*/
+
+.header-format {
+  text-decoration: none;
+  padding: 12px;
+  /*padding: 0.8em;*/
+  
+  /*//Removes underline*/
+  /*//text-decoration: none;*/
+  background: black;
+  color: white;
+  
+  /*padding: 20px;*/
+  
+  text-align: center;
+}
+
+/*#smallLessons {*/
+/*  display: none;*/
+/*}*/
+
+/*trying to make it britten up when the links are hovered over*/
+.main-links:hover {
+    text-decoration: none;
+    background-color: #E0E0FF;
+    
+    color: 	#ff93ac;
+}
+
+.logo:hover {
+    text-decoration: none;
+    background-color: #E0E0FF;
+    
+    /*color: 	#ff6289;*/
+    color: 	#ff93ac;
+}
+
+
+
+/*it was originally "@media screen and (max-width: 600px)"*/
+@media screen and (max-width: 78.8em) {
+  /*.topnav a:not(:first-child) {display: none;}*/
+  .topnav a.main-links {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/*it was originally "@media screen and (max-width: 600px)"*/
+@media screen and (max-width: 78.8em) {
+  /*.topnav.responsive {position: relative;}*/
+  .topnav.responsive .icon {
+    position: absolute;
+    /*right: 0;*/
+    right: 20px;
+    /*right: 0.65em;*/
+    top: 0;
+    
+    /*color: white;*/
+  }
+  
+  .topnav.responsive .main-links, .topnav.responsive .invisible  {
+    float: none;
+    display: block;
+    text-align: left;
+    /*text-align: center;*/
+    
+    /*trying to format this button*/
+    /*position: absolute;*/
+    right: 20px;
+    /*right: 0.65em;*/
+    top: 30px;
+    /*top: 0.96774em;*/
+    /*max-width: 50em;*/
+    /*font-size: 17px;*/
+  }
+  
+  .topnav.responsive #mainLessons{display: none;}
+
+}
+
+/*Code for the menu & making the menu lines look like an x when clicked with help from javascript*/
+
+.bars, .menu {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 23px;
+    /*width: 0.7419em;*/
+    height: 5px;
+    /*height: 0.16129em;*/
+    background-color:pink;
+    margin: 3px 2px 0px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6.5px) ; 
+    transform: rotate(-45deg) translate(-5px, 6.5px) ; 
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-4.4px, -6.5px) ; 
+    transform: rotate(45deg) translate(-4.4px, -6.5px) ; 
+}
