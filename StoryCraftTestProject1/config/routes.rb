@@ -7,4 +7,12 @@ Rails.application.routes.draw do
     # root :to => redirect('/') # home and the other are different
     # root :to => redirect('/home') # home and the other are different
   # get 'static_pages/header'
+  
+  
+  # get 'auth/twitter/callback' => 'session#create',:as => 'login'
+  
+  # get 'logout' => 'sessions#destroy', as: 'logout'
+  
+  # get 'auth/failure' => redirect('/')
+  
 end
